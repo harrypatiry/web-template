@@ -6,20 +6,27 @@ const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setClearColor( 0x000000, 0 );
 renderer.setSize( window.innerWidth, window.innerHeight );
 section.appendChild( renderer.domElement );
+
+
+const loader = new THREE.TextureLoader();
+
 const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
+const material = new THREE.MeshLambertMaterial( { map: loader.load('assets/rock.png') } );
 const cube = new THREE.Mesh( geometry, material );
+
 const light = new THREE.AmbientLight( 0x404040 );
 const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
 scene.add( cube, light, directionalLight );
 scene.background = null;
-camera.position.z = 5;
 
+camera.position.z = 4;
 
 function animate() {
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
 	requestAnimationFrame( animate );
+    const currentTimeline = window.scrollY/3000;
+    const rx = currentTimeline * Math.PI * 2;
+    const ry = currentTimeline * Math.PI * 2;
+    cube.rotation.set(rx, ry, 0);
 	renderer.render( scene, camera );
 }
 animate();
