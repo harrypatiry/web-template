@@ -22,7 +22,7 @@ const directionalLight = new THREE.DirectionalLight( 0xffffff, .9 );
 scene.add( cube, light, directionalLight );
 scene.background = null;
 
-camera.position.z = 4;
+camera.position.z = 3;
 
 function animate() {
 	requestAnimationFrame( animate );
