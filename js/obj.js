@@ -11,11 +11,12 @@ const rockBase = textureLoader.load('assets/rock.png');
 const rockNormal = textureLoader.load('assets/rocknormal.png');
 const rockDisplacement = textureLoader.load('assets/rockdisplacement.png');
 
-const geometry = new THREE.BoxGeometry(1, 1, 1, 100, 100, 100);
+const geometry = new THREE.BoxBufferGeometry(2, 2, 2, 100, 100, 100);
 const material = new THREE.MeshStandardMaterial( { 
     map: rockBase,
     normalMap: rockNormal,
-    displacementMap: rockDisplacement
+    displacementMap: rockDisplacement,
+    displacementScale: .2
     
 } );
 const cube = new THREE.Mesh( geometry, material );
@@ -26,7 +27,7 @@ scene.add( cube, light, directionalLight );
 scene.background = null;
 
 
-camera.position.z = 3;
+camera.position.z = 5;
 
 function animate() {
 	requestAnimationFrame( animate );
