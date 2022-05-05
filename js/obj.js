@@ -9,11 +9,14 @@ section.appendChild( renderer.domElement );
 const textureLoader = new THREE.TextureLoader();
 const rockBase = textureLoader.load('assets/rock.png');
 const rockNormal = textureLoader.load('assets/rocknormal.png');
+const rockDisplacement = textureLoader.load('assets/rockdisplacement.png');
 
-const geometry = new THREE.BoxGeometry();
+const geometry = new THREE.BoxGeometry(1, 1, 1, 100, 100, 100);
 const material = new THREE.MeshStandardMaterial( { 
     map: rockBase,
-    normalMap: rockNormal
+    normalMap: rockNormal,
+    displacementMap: rockDisplacement
+    
 } );
 const cube = new THREE.Mesh( geometry, material );
 
@@ -21,6 +24,7 @@ const light = new THREE.AmbientLight( 0x404040 );
 const directionalLight = new THREE.DirectionalLight( 0xffffff, .9 );
 scene.add( cube, light, directionalLight );
 scene.background = null;
+
 
 camera.position.z = 3;
 
