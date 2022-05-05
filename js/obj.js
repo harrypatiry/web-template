@@ -33,14 +33,14 @@ const material = new THREE.MeshPhongMaterial( {
 } );
 const cube = new THREE.Mesh( geometry, material );
 
-const outerGeometry = new THREE.BoxGeometry(1.5, 1.5, 1.5, 50, 50, 50);
-const outerMaterial = new THREE.MeshPhongMaterial( { 
-    wireframe: true,
-    map: rockBase,
-    normalMap: rockNormal,
+// const outerGeometry = new THREE.BoxGeometry(1.5, 1.5, 1.5, 50, 50, 50);
+// const outerMaterial = new THREE.MeshPhongMaterial( { 
+//     wireframe: true,
+//     map: rockBase,
+//     normalMap: rockNormal,
     
-} );
-const outer = new THREE.Mesh( outerGeometry, outerMaterial );
+// } );
+// const outer = new THREE.Mesh( outerGeometry, outerMaterial );
 
 const innerGeometry = new THREE.DodecahedronGeometry(.7, 1);
 const innerMaterial = new THREE.MeshPhongMaterial( { 
@@ -53,8 +53,8 @@ const innerMaterial = new THREE.MeshPhongMaterial( {
 const inner = new THREE.Mesh( innerGeometry, innerMaterial );
 
 const light = new THREE.AmbientLight( 0x404040 );
-const directionalLight = new THREE.DirectionalLight( 0xffffff, .9 );
-scene.add( inner, outer, cube, light, directionalLight );
+const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
+scene.add( inner, cube, light, directionalLight );
 scene.background = null;
 
 
@@ -68,7 +68,7 @@ function animate() {
     cube.rotation.set(rx, ry, 0);
     cube.material.displacementScale = currentTimeline;
     inner.material.displacementScale = currentTimeline * 2;
-    outer.rotation.set(rx, ry, 0);
+    //outer.rotation.set(rx, ry, 0);
     inner.rotation.set(rx, ry, 0);
 	renderer.render( scene, camera );
 }
