@@ -42,9 +42,19 @@ const outerMaterial = new THREE.MeshPhongMaterial( {
 } );
 const outer = new THREE.Mesh( outerGeometry, outerMaterial );
 
+const innerGeometry = new THREE.DodecahedronGeometry(.7, 1);
+const innerMaterial = new THREE.MeshPhongMaterial( { 
+    wireframe: true,
+    map: rockBase,
+    normalMap: rockNormal,
+    displacementMap: rockDisplacement,
+    
+} );
+const inner = new THREE.Mesh( innerGeometry, innerMaterial );
+
 const light = new THREE.AmbientLight( 0x404040 );
 const directionalLight = new THREE.DirectionalLight( 0xffffff, .9 );
-scene.add( outer, cube, light, directionalLight );
+scene.add( inner, outer, cube, light, directionalLight );
 scene.background = null;
 
 
@@ -56,8 +66,10 @@ function animate() {
     const rx = currentTimeline * Math.PI * 2;
     const ry = currentTimeline * Math.PI * 2;
     cube.rotation.set(rx, ry, 0);
-    cube.material.displacementScale = currentTimeline/4;
+    cube.material.displacementScale = currentTimeline;
+    inner.material.displacementScale = currentTimeline * 2;
     outer.rotation.set(rx, ry, 0);
+    inner.rotation.set(rx, ry, 0);
 	renderer.render( scene, camera );
 }
 animate();
