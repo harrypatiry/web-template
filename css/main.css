@@ -72,11 +72,23 @@ a:hover {
 
 .container {
     min-width: 100%;
-    display: flex;
     overflow-x: hidden;
 }
 
-.inter {
+.content{
     padding: 5%;
     z-index: 1;
+    text-align: center
+}
+
+.title {
+    min-height: 100vh;
+}
+
+.about {
+    min-height: 100vh;
+}
+
+.projects {
+    min-height: 100vh;
 }
