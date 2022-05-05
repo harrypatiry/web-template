@@ -1,3 +1,5 @@
+import * as THREE from "../node_modules/three/build/three.module.js"
+
 const section = document.querySelector("section.obj")
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -11,8 +13,8 @@ const rockBase = textureLoader.load('assets/rock.png');
 const rockNormal = textureLoader.load('assets/rocknormal.png');
 const rockDisplacement = textureLoader.load('assets/rockdisplacement.png');
 
-const geometry = new THREE.BoxBufferGeometry(2, 2, 2, 100, 100, 100);
-const material = new THREE.MeshStandardMaterial( { 
+const geometry = new THREE.BoxGeometry(2, 2, 2, 100, 100, 100);
+const material = new THREE.MeshPhongMaterial( { 
     map: rockBase,
     normalMap: rockNormal,
     displacementMap: rockDisplacement,
