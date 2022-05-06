@@ -35,7 +35,7 @@ const cube = new THREE.Mesh( geometry, material );
 
 const outerGeometry = new THREE.BoxGeometry(1.5, 1.5, 1.5, 50, 50, 50);
 const outerMaterial = new THREE.MeshPhongMaterial( { 
-    wireframe: true,
+    wireframe: false,
     map: rockBase,
     normalMap: rockNormal,
     
@@ -52,9 +52,22 @@ const innerMaterial = new THREE.MeshPhongMaterial( {
 } );
 const inner = new THREE.Mesh( innerGeometry, innerMaterial );
 
+// const shardGeometry = new THREE.DodecahedronGeometry(0.1, 8);
+// const shardMaterial = new THREE.MeshPhongMaterial( { 
+//     wireframe: false,
+//     map: rockBase,
+//     normalMap: rockNormal,
+//     displacementMap: rockDisplacement,
+//     displacementScale: .1
+// } );
+// const shard = new THREE.Mesh( shardGeometry, shardMaterial );
+
+// shard.position.set( -3, 2, 0 );
+
+
 const light = new THREE.AmbientLight( 0x404040 );
 const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
-scene.add(outer, inner, cube, light, directionalLight );
+scene.add( outer, inner, cube, light, directionalLight );
 scene.background = null;
 
 
@@ -70,6 +83,7 @@ function animate() {
     inner.material.displacementScale = currentTimeline * 2;
     outer.rotation.set(rx, ry, 0);
     inner.rotation.set(rx, ry, 0);
+    //shard.rotation.set(-rx, ry/4, 0);
 	renderer.render( scene, camera );
 }
 animate();
