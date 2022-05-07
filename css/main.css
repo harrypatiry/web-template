@@ -26,10 +26,6 @@ section.obj {
     z-index: 4;
 }
 
-#imgs {
-    position: relative;
-}
-
 .menu {
     background-color: black;
     cursor: pointer;
@@ -136,53 +132,52 @@ a {
     perspective: 5px;
 }
 
+
 .about {
-    /* clear: both;
+    clear: both;
     display: grid;
     min-height: 100vh;
-    padding-top: 1em;
+    padding: 1em;
     grid-auto-rows: 100px;
     grid-template-areas:
     "a a b"
     "c c d";
-    align-content: start; */
+    align-content: start;
 }
 
 .about h1{
-    /* grid-area: a;
+    grid-area: a;
     font-size: 72px;
     letter-spacing: 10px;
     text-transform: uppercase;
     font-weight: 100;
     transform: scaleY(2);
-    position: relative;
-    z-index: -3; */
+    z-index: -3;
 }
 
 .about p {
-    /* grid-area: c;
+    grid-area: c;
     font-size: 16px;
     width: 40%;
-    padding-top: 1em; */
+    padding-top: 1em;
 }
 
 .about img {
-    /* grid-area: d; */
+    grid-area: d;
     transform: rotate(90deg);
-    /* z-index: 3;  */
 }
 
 .projects {
-    min-height: 100vh;
+    clear: both;
     display: grid;
+    min-height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     gap: 5em;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(50px, auto);
     text-transform: uppercase;
 }
 
 .projects h1 {
-    position: relative;
     font-size: 72px;
     letter-spacing: 10px;
     text-transform: uppercase;
@@ -194,11 +189,11 @@ a {
 }
 
 .projects p {
-    padding: 5%;
     position: relative;
+    padding: 5%;
     font-size: 42px;
     letter-spacing: 3px;
-    z-index: -2;
+    z-index: -3;
 }
 
 .pro-1 {
@@ -211,11 +206,20 @@ a {
     grid-row: 3;
 }
 
-.box-2 {
-    width: 400px;
-    height: 400px;
-    background-color: white;
-    border: 1px solid white;
-    z-index: -2;
-    color: black;
+#imgs {
+    position: relative;
+    right: 3em;
+}
+
+#imgstwo {
+    position: relative;
+}
+
+#imgsthree {
+    position: relative;
+}
+
+.img-container {
+    position: relative;
+    padding: 3em;
 }

@@ -5,11 +5,17 @@ window.onload = function() {
         links.classList.toggle('active');
     })
     let imgs = document.getElementById('imgs');
-    let speed = 4;
+    let imgstwo = document.getElementById('imgstwo');
+    let imgsthree = document.getElementById('imgsthree');
+    let speed = 10;
     window.onscroll = function () {
         let yOffset = window.scrollY;
-        imgs.classList.add('fixed')
         imgs.style.top = (yOffset / speed) + "px";
+        imgs.style.right = ((yOffset / speed)/ 6) + "px";
+        imgstwo.style.top = ((yOffset / speed)/4) + "px";
+        imgstwo.style.left = ((yOffset / speed)/ 8) + "px";
+        imgsthree.style.top = ((yOffset / speed)/8) + "px";
+        imgsthree.style.right = ((yOffset / speed)/4) + "px";
     }
 }
 
