@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     min-height: 4000px;
 }
@@ -84,13 +84,15 @@ a {
     overflow-x: hidden;
 }
 
+.home {
+    min-height: 100vh;
+}
 .content{
     padding: 5%;
     z-index: 1;
 }
 
 .title {
-    min-height: 100vh;
 }
 
 .title h1 {
@@ -117,54 +119,53 @@ a {
     perspective: 10px;
 }
 
-.txt-lrg {
-    font-size: 112px;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    font-weight: lighter;
-    font-style: normal;
-    position: absolute;
-    top: 80%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    transform: scaleY(2.5);
-    z-index: -2;
-    perspective: 5px;
-}
 
+.desc {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+}
+.desc p{
+    color: rgb(131, 131, 131);
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
 
 .about {
     clear: both;
     display: grid;
     min-height: 100vh;
     padding: 1em;
-    grid-auto-rows: 100px;
-    grid-template-areas:
-    "a a b"
-    "c c d";
-    align-content: start;
 }
 
 .about h1{
-    grid-area: a;
-    font-size: 72px;
+    font-size: 82px;
     letter-spacing: 10px;
     text-transform: uppercase;
     font-weight: 100;
-    transform: scaleY(2);
     z-index: -3;
+    border-bottom: 1px solid white;
+}
+
+.about h2 {
+    font-size: 98px;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+    z-index: -3;
+    color: rgb(49, 49, 49);
 }
 
 .about p {
-    grid-area: c;
-    font-size: 16px;
-    width: 40%;
+    text-align: center;
+    width: 90%;
+    font-size: 22px;
+    letter-spacing: 1px;
     padding-top: 1em;
-}
-
-.about img {
-    grid-area: d;
-    transform: rotate(90deg);
 }
 
 .projects {

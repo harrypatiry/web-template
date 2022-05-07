@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cf99d581ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -24,38 +25,59 @@
     </header>
     <div class="container">
         <div class="content">
-            <section class="title">
-                <h1>Harry Patiry</h1>
-                <div class="box-1"></div>
-                <div class="txt-lrg">
-                    <p>UX/UI</p>
+            <section class="home">
+                <div class="title">
+                    <h1>Harry Patiry</h1>
+                    <div class="box-1"></div>
+                </div>
+                <div class="desc">
+                    <p>Web developer</p><br/>
+                    <p>Design for the modern digital space</p>
                 </div>
             </section>
             <section class="about">
                 <h1>About</h1>
-                <p id="ps">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tempora molestias, provident ut recusandae commodi? Dicta neque, quam cum ea iusto vel eligendi repellendus voluptate ab quod incidunt excepturi voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tempora molestias, provident ut recusandae commodi? Dicta neque, quam cum ea iusto vel eligendi repellendus voluptate ab quod incidunt excepturi voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id tempora molestias, provident ut recusandae commodi? Dicta neque, quam cum ea iusto vel eligendi repellendus voluptate ab quod incidunt excepturi voluptatum?</p>
-                <div class="img-container">
-                    <img id="imgs" src="assets/marble.jpg" width="300px">
-                </div>
+                <h2>User Experience</h2>
+                <h2>&</h2>
+                <h2>User Interface</h2>
+                <p>As a web designer I create interactive designs that the end user will remember. I focus on building a beautiful space that is cohesive and easily navigable.</p>
             </section>
             <section class="projects">
                 <h1>Projects</h1>
                 <div class="pro-1">
                 <div class="img-container">
-                    <a href="#"><img id="imgstwo" src="assets/Studio.png" width="500"></a>
+                    <a href="#"><img id="imgs" src="assets/Studio.png" width="500"></a>
                 </div>
                     <p>Odyssee</p>
                 </div>
                 <div class="pro-2">
                     <div class="img-container">
-                        <a href="#"><img id="imgsthree" src="assets/project2.png" width="500"></a>
+                        <a href="#"><img id="imgstwo" src="assets/project2.png" width="500"></a>
                     </div>
                     <p>NASA Exoplanet Query</p>
                 </div>
             </section>
+            <section>
+                <div className='contact'>
+                    <h2>Contact</h2>
+                    <form action="https://formsubmit.co/harrypatiry@gmail.com" method="POST">
+                        <input type="hidden" name='_captcha' value='false'/>
+                        <input type="email" name='email' placeholder="E-Mail" required/>
+                        <input type="hidden" name='_subject' placeholder="Subject" required/>
+                        <input type="text" name='message' placeholder="Message" required/>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </section>
             <footer>
-                <div class="box-2">
-                    <p>Contact</p>
+                <div>
+                    <div className='social'>
+                        <a href="https://harrypatiry@gmail.com"><i className="fab fa-regular fa-envelope"> email</i></a>
+                        <a href="https://github.com/harrypatiry"><i className="fab fa-github"> GitHub</i></a>
+                        <a href="https://www.linkedin.com/in/harry-patiry-2b8658152/"><i className="fab fa-linkedin"> Linkedin</i></a>
+                        <i class="fa fa-location-dot"></i><p>Orlando, FL</p>
+                    </div>
+                    <div className='copyright'>Copyright &copy; 2022. Harry Patiry</div>
                 </div>
             </footer>
         </div>
