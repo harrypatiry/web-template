@@ -227,7 +227,8 @@ a {
 }
 
 .contact {
-    padding-top: 20%;
+    max-height: 2vh;
+    padding-top: 25%;
     display: block;
     align-items: center;
     justify-content: center;
@@ -270,14 +271,12 @@ input[type=submit]:hover {
 }
 
 footer {
-    display: block;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 40%;
-    height:70px;
+    max-height:70px;
     clear:both;
-    position:relative;
     bottom:0;
     width: 100%;
 }
