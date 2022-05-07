@@ -20,7 +20,7 @@ const rockDisplacement = textureLoader.load('assets/rockdisplacement.png');
 //     geometry = gltf.scene;
 //     scene.add(gltf.scene);
 // });
-const geometry = new THREE.BoxGeometry(1.5, 1.5, 1.5, 50, 50, 50);
+const geometry = new THREE.BoxGeometry(1.7, 1.7, 1.7, 50, 50, 50);
 //const geometry = new THREE.DodecahedronGeometry(1, 1);
 //const geometry = new THREE.TorusKnotGeometry(1, 1,1,1,10);
 const material = new THREE.MeshPhongMaterial( { 
@@ -33,7 +33,7 @@ const material = new THREE.MeshPhongMaterial( {
 } );
 const cube = new THREE.Mesh( geometry, material );
 
-const outerGeometry = new THREE.BoxGeometry(1.5, 1.5, 1.5, 50, 50, 50);
+const outerGeometry = new THREE.BoxGeometry(2, 2, 2, 50, 50, 50);
 const outerMaterial = new THREE.MeshPhongMaterial( { 
     wireframe: false,
     map: rockBase,
@@ -74,7 +74,15 @@ scene.background = null;
 camera.position.z = 5;
 
 function animate() {
-	requestAnimationFrame( animate );
+    window.addEventListener( 'resize', onWindowResize, false );
+    function onWindowResize(){
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+    
+        renderer.setSize( window.innerWidth, window.innerHeight );
+    
+    }
     const currentTimeline = window.scrollY/3000;
     const rx = currentTimeline * Math.PI * 2;
     const ry = currentTimeline * Math.PI * 2;
@@ -84,6 +92,7 @@ function animate() {
     outer.rotation.set(rx, ry, 0);
     inner.rotation.set(rx, ry, 0);
     //shard.rotation.set(-rx, ry/4, 0);
+    requestAnimationFrame( animate );
 	renderer.render( scene, camera );
 }
 animate();
