@@ -315,6 +315,18 @@ footer {
     align-items: center;
 }
 
+.social a{
+    font-size: 22px;
+    padding: 1em;
+}
+
 .copyright {
     padding-top: 3em;
+}
+
+@media screen and (max-width: 900px) {
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
 }

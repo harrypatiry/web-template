@@ -12,10 +12,18 @@ window.onload = function() {
             }
         })
     })
+    if(window.innerWidth > 900){
+        console.log('> 900')
+        move();
+    } else {
+        console.log('< 900');
+    }
+}
 
+function move() {
     let imgs = document.getElementById('imgs');
     let imgstwo = document.getElementById('imgstwo');
-    let speed = 40;
+    let speed = 20;
     window.onscroll = function () {
         let yOffset = window.scrollY;
         imgs.style.top = (yOffset / speed) + "px";
@@ -25,3 +33,6 @@ window.onload = function() {
     }
 }
 
+window.onresize = () => {
+    location.reload();
+  }
