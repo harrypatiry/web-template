@@ -28,6 +28,11 @@ nav {
     align-items: center;
     min-height: 8vh;
     background-color: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 4;
 }
 
 .logo {
@@ -40,11 +45,15 @@ nav {
     color: white;
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
     list-style: none;
 }
 .mobile-menu {
     display: none;
+}
+
+.nav-links ul {
+    overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
