@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
-<body>
+<body class="body-active">
+    <div class="load-container">
+        <label>Loading...</label>
+        <div class="bar-container">
+            <div class="bar"></div>
+        </div>
+    </div>
     <section class="obj">
         <!-- three canvas -->
     </section>
@@ -20,32 +26,25 @@
                 </div>
                 <ul class="nav-links">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#">Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
                 <div class="mobile-menu">NAVIGATION</div>
             </nav>
-            <!-- <a class="menu">NAVIGATION</a>
-            <nav class="links">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Projects</a>
-                <a href="#" class="nav-link">Contact</a>  
-            </nav> -->
         </div>
     </header>
     <div class="container">
         <div class="content">
-            <section class="home">
+            <section class="home" id="home">
                 <div class="title">
                     <div class="box-1"></div>
                 </div>
@@ -54,14 +53,14 @@
                     <p>Design for the modern digital space</p>
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="about">
                 <h1>About</h1>
                 <h2>User Experience</h2>
                 <h2>&</h2>
                 <h2>User Interface</h2>
                 <p>I am a developer and designer based in Florida. As a web designer I create interactive designs that the end user will remember. I focus on building a beautiful space that is cohesive and easily navigable.</p>
             </section>
-            <section class="projects">
+            <section class="projects" id="projects">
                 <h1>Projects</h1>
                 <div class="pro-1">
                 <div class="img-container">
@@ -76,7 +75,7 @@
                     <p>NASA Exoplanet Query</p>
                 </div>
             </section>
-            <section class='contact'>
+            <section class='contact' id="contact">
                 <div>
                     <h2>Contact</h2>
                     <form action="https://formsubmit.co/harrypatiry@gmail.com" method="POST">

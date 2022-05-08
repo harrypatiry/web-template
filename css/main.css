@@ -16,6 +16,58 @@ section.obj {
     z-index: -1;
 }
 
+/* .body-active {
+    overflow: hidden;
+} */
+
+.load-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    animation: hide 0s ease-in 3.1s;
+    animation-fill-mode: forwards;
+}
+
+label {
+    font-size: 22px;
+    padding: 1em;
+}
+.bar-container {
+    position: relative;
+    width: 250px;
+    height: 10px;
+    border: 1px solid white;
+    background-color: black;
+}
+
+.bar {
+    position: absolute;
+    height: 100%;
+    background-color: white;
+    font-size: 2em;
+    animation: progress-animation 3s;
+}
+
+@keyframes hide {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes progress-animation {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
 .nav-container {
     letter-spacing: 3px;
     font-weight: light;
@@ -216,7 +268,6 @@ a, a:visited {
     gap: 5em;
     grid-auto-rows: minmax(50px, auto);
     text-transform: uppercase;
-    border-bottom: 1px solid white;
 }
 
 .projects h1 {
@@ -265,9 +316,10 @@ a, a:visited {
 }
 
 .contact {
-    max-height: 50vh;
+    min-height: 40vh;
     padding-top: 25%;
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -300,7 +352,7 @@ input[type=submit] {
     border-bottom: none;
     margin-top: 30px;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all .5s ease;
 }
 
 input[type=submit]:hover {
@@ -326,7 +378,10 @@ footer {
 
 @media screen and (max-width: 900px) {
     .projects {
+        padding-left: 1em;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }

@@ -20,10 +20,17 @@ window.onload = function() {
     }
 }
 
+//better way to do it, but looks worse imo
+//window.addEventListener("load", function() {
+     //document.body.classList.remove('body-active');
+//     let loadScreen = document.querySelector('.load-container');
+//     document.body.removeChild(loadScreen);
+//})
+
 function move() {
     let imgs = document.getElementById('imgs');
     let imgstwo = document.getElementById('imgstwo');
-    let speed = 20;
+    let speed = 40;
     window.onscroll = function () {
         let yOffset = window.scrollY;
         imgs.style.top = (yOffset / speed) + "px";

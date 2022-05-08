@@ -14,15 +14,7 @@ const rockBase = textureLoader.load('assets/rock.png');
 const rockNormal = textureLoader.load('assets/rocknormal.png');
 const rockDisplacement = textureLoader.load('assets/rockdisplacement.png');
 
-// const loader = new GLTFLoader();
-// let geometry;
-// loader.load('assets/cube.gltf', function(gltf) {
-//     geometry = gltf.scene;
-//     scene.add(gltf.scene);
-// });
 const geometry = new THREE.BoxGeometry(1.7, 1.7, 1.7, 50, 50, 50);
-//const geometry = new THREE.DodecahedronGeometry(1, 1);
-//const geometry = new THREE.TorusKnotGeometry(1, 1,1,1,10);
 const material = new THREE.MeshPhongMaterial( { 
     wireframe: false,
     map: rockBase,
@@ -51,19 +43,6 @@ const innerMaterial = new THREE.MeshPhongMaterial( {
     
 } );
 const inner = new THREE.Mesh( innerGeometry, innerMaterial );
-
-// const shardGeometry = new THREE.DodecahedronGeometry(0.1, 8);
-// const shardMaterial = new THREE.MeshPhongMaterial( { 
-//     wireframe: false,
-//     map: rockBase,
-//     normalMap: rockNormal,
-//     displacementMap: rockDisplacement,
-//     displacementScale: .1
-// } );
-// const shard = new THREE.Mesh( shardGeometry, shardMaterial );
-
-// shard.position.set( -3, 2, 0 );
-
 
 const light = new THREE.AmbientLight( 0x404040 );
 const directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
