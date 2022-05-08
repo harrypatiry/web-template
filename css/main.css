@@ -27,7 +27,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: none;
+    background-color: black;
     position: fixed;
     top: 0;
     right: 0;
@@ -47,9 +47,11 @@ nav {
     justify-content: space-around;
     width: 50%;
     list-style: none;
+    font-size: 18px;
 }
 .mobile-menu {
     display: none;
+    color: rgb(151, 151, 151);
 }
 
 .nav-links ul {
@@ -94,7 +96,6 @@ nav {
         display: flex;
         font-size: 22px;
         cursor: pointer;
-        z-index: 3;
     }
 }
 
@@ -264,7 +265,7 @@ a, a:visited {
 }
 
 .contact {
-    max-height: 2vh;
+    max-height: 50vh;
     padding-top: 25%;
     display: block;
     align-items: center;
@@ -308,14 +309,10 @@ input[type=submit]:hover {
 }
 
 footer {
-    align-items: center;
-    justify-content: center;
+    padding: 10%;
     text-align: center;
-    padding-top: 40%;
-    max-height:70px;
-    clear:both;
-    bottom:0;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .copyright {
