@@ -231,6 +231,7 @@ a, a:visited {
     display: grid;
     min-height: 100vh;
     padding: 1em;
+    padding-bottom: 8em;
 }
 
 .about h1{
@@ -254,7 +255,7 @@ a, a:visited {
 
 .about p {
     text-align: center;
-    width: 90%;
+    align-items: center;
     font-size: 22px;
     letter-spacing: 1px;
     padding-top: 1em;
