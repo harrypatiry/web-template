@@ -40,6 +40,6 @@ function move() {
     }
 }
 
-window.onresize = () => {
-    location.reload();
-  }
+// window.onresize = () => {
+//     location.reload();
+//   }
