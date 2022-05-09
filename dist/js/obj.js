@@ -1,4 +1,5 @@
-import * as THREE from "../node_modules/three/build/three.module.js"
+import * as THREE from "https://unpkg.com/three@0.127.0/build/three.module.js";
+//import * as THREE from "three/build/three.module"
 //import {GLTFLoader} from "../node_modules/three/examples/jsm/loaders/GLTFLoader.js"
 
 const section = document.querySelector("section.obj")
