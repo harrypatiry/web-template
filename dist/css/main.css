@@ -20,7 +20,7 @@ section.obj {
     overflow: hidden;
 } */
 
-.load-container {
+/* .load-container {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -65,7 +65,7 @@ label {
 @keyframes progress-animation {
     0% {width: 0%;}
     100% {width: 100%;}
-}
+} */
 
 .nav-container {
     letter-spacing: 3px;
@@ -97,7 +97,7 @@ nav {
     display: flex;
     width: 50%;
     list-style: none;
-    font-size: 22px;
+    font-size: 18px;
 }
 .nav-links li {
     padding-left: 5%;
@@ -131,7 +131,7 @@ nav {
         flex-direction: column;
         align-items: center;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transition: transform 0.3s ease-in;
     }
     .nav-links li {
         text-align: center;
@@ -144,7 +144,7 @@ nav {
     .nav-links li:hover {
         background-color: #FFF;
         color: black;
-        transition: 0.5s ease-in;
+        transition: 0.3s ease-in;
     }
     .mobile-menu {
         display: flex;
@@ -343,7 +343,7 @@ input[type=submit] {
     border-bottom: none;
     margin-top: 30px;
     cursor: pointer;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
 
 input[type=submit]:hover {
