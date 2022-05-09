@@ -372,9 +372,7 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-    .nav {
-        padding: 0;
-    }
+
     section.obj {
        justify-content: center;
     }
@@ -412,5 +410,8 @@ footer {
     }
     .project p, .about p, .home p, .bar{
         font-size: 28px;
+    }
+    .social a{
+        display: block;
     }
 }
