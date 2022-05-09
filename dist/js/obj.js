@@ -19,8 +19,7 @@ const material = new THREE.MeshPhongMaterial( {
     wireframe: false,
     map: rockBase,
     displacementMap: rockDisplacement,
-    displacementScale: .2
-    
+    displacementScale: .2,
 } );
 const cube = new THREE.Mesh( geometry, material );
 
@@ -28,7 +27,6 @@ const outerGeometry = new THREE.BoxGeometry(2, 2, 2, 50, 50, 50);
 const outerMaterial = new THREE.MeshPhongMaterial( { 
     wireframe: false,
     map: rockBase,
-    
 } );
 const outer = new THREE.Mesh( outerGeometry, outerMaterial );
 
@@ -37,7 +35,6 @@ const innerMaterial = new THREE.MeshPhongMaterial( {
     wireframe: false,
     map: rockBase,
     displacementMap: rockDisplacement,
-    
 } );
 const inner = new THREE.Mesh( innerGeometry, innerMaterial );
 
