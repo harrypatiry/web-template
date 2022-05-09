@@ -184,9 +184,6 @@ a, a:visited {
     z-index: 1;
 }
 
-.title {
-}
-
 .title h1 {
     position: fixed;
     top: 0;
