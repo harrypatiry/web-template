@@ -33,7 +33,7 @@ section.obj {
     justify-content: center;
     align-items: center;
     z-index: 100;
-    animation: hide 0s ease-in 3.1s;
+    animation: hide 0s ease-in 5.1s;
     animation-fill-mode: forwards;
 }
 
@@ -54,7 +54,7 @@ label {
     height: 100%;
     background-color: white;
     font-size: 2em;
-    animation: progress-animation 3s;
+    animation: progress-animation 5s forwards;
 }
 
 @keyframes hide {
