@@ -12,14 +12,12 @@ section.appendChild( renderer.domElement );
 
 const textureLoader = new THREE.TextureLoader();
 const rockBase = textureLoader.load('assets/rock.png');
-const rockNormal = textureLoader.load('assets/rocknormal.png');
 const rockDisplacement = textureLoader.load('assets/rockdisplacement.png');
 
 const geometry = new THREE.BoxGeometry(1.7, 1.7, 1.7, 50, 50, 50);
 const material = new THREE.MeshPhongMaterial( { 
     wireframe: false,
     map: rockBase,
-    normalMap: rockNormal,
     displacementMap: rockDisplacement,
     displacementScale: .2
     
@@ -30,7 +28,6 @@ const outerGeometry = new THREE.BoxGeometry(2, 2, 2, 50, 50, 50);
 const outerMaterial = new THREE.MeshPhongMaterial( { 
     wireframe: false,
     map: rockBase,
-    normalMap: rockNormal,
     
 } );
 const outer = new THREE.Mesh( outerGeometry, outerMaterial );
@@ -39,7 +36,6 @@ const innerGeometry = new THREE.DodecahedronGeometry(.7, 1);
 const innerMaterial = new THREE.MeshPhongMaterial( { 
     wireframe: false,
     map: rockBase,
-    normalMap: rockNormal,
     displacementMap: rockDisplacement,
     
 } );
