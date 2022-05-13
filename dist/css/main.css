@@ -112,6 +112,14 @@ nav {
     overflow: hidden;
 }
 
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #ffffff;
+  }
+
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -147,9 +155,12 @@ nav {
         transition: 0.3s ease-in;
     }
     .mobile-menu {
-        display: flex;
+        display: block;
         font-size: 22px;
         cursor: pointer;
+    }
+    .projects img{
+        width: 350px;
     }
 }
 
@@ -384,29 +395,41 @@ footer {
     }
     .about h2{
         position: relative;
-        font-size: 72px;
+        font-size: 40px;
         z-index: -3;
     }
     .projects {
+        clear: both;
+        padding: 0;
+        margin: 0;
         display: block;
         align-items: center;
         text-align: center;
+    }
+
+    .img-container{
+        padding: 0;
+    }
+
+    #imgs {
+        position: relative;
+        right: 0;
     }
 
     .projects h1{
         font-size: 48px;
     }
 
-    .load-container {
+    /* .load-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-    }
+    } */
 
     .box-1 {
-        position: relative;
+        display: none;
     }
     .project p, .about p, .home p, .bar{
         font-size: 28px;
